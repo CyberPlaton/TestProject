@@ -1,31 +1,23 @@
 -----------------------------------------------------------
 -- Linux linking
 -----------------------------------------------------------
-filter {"platforms:Unix","configurations:Debug"}
+filter "platforms:Linux"
+	links{
+		"GL", "X11", "pthread", "png"
+	}
+filter {"platforms:Linux","configurations:Debug"}
 	libdirs{"libs", "%{prj.location}/common/lib/Debug"}
 	links{
-		"X11", 
-		"GL",
-		"pthread",
-        "png",
 	}
 
 
-filter {"platforms:Unix","configurations:Release"}
+filter {"platforms:Linux","configurations:Release"}
 	libdirs{"libs", "%{prj.location}/common/lib/Release"}
 	links{
-		"X11", 
-		"GL",
-		"pthread",
-        "png",
 	}
 
 
-filter {"platforms:Unix","configurations:Distr"}
+filter {"platforms:Linux","configurations:Distr"}
 	libdirs{"libs", "%{prj.location}/common/lib/Distr"}
 	links{
-		"X11", 
-		"GL",
-		"pthread",
-        "png",
 	}
