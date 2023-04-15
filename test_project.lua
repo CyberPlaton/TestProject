@@ -22,11 +22,13 @@ filter{}
         "%{prj.location}/src/Main.h",
         "%{prj.location}/src/Main.cpp",
         "%{prj.location}/src/olcPixelGameEngine.h",
+        "%{prj.location}/src/olcPGEX_TransformedView.h",
         "%{prj.location}/src/stb_image.h",
     }
 
     includedirs{
         "%{prj.location}",
+        "%{prj.location}/common/include",     
     }
 
 
