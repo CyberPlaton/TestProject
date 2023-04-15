@@ -1,8 +1,8 @@
-workspace "MAML"
+workspace "Test"
 	print("\n")
-	print("Creating Workspace: \"MAML\":")
+	print("Creating Workspace: \"Test\":")
 	architecture "x86_64"
-	startproject "Maml"
+	startproject "Test"
 	configurations{
 		"Debug",		-- Traditional Debugging build
 		"Release",		-- Verbose build to be debugged in a "Release" environment
@@ -17,16 +17,6 @@ workspace "MAML"
 		"MultiProcessorCompile"
 	}
 
-	group "Maml"
-		include "maml_project.lua"
+	group "Test"
+		include "test_project.lua"
 	group ""
-
-	group "Sandbox"
-	include "maml_sandbox_project.lua"
-	group ""
-
-
-
-	print("\nDo not forget following steps for a clean build:\n")
-	print("1.) Set working directory correctly for debugging in your IDE!\n")
-	print("2.) Disable usage of vcpkg if using Visual Studio!\n")
